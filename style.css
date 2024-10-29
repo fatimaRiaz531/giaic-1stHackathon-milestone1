@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    text-transform: capitalize;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.resume {
+    display: flex;
+    max-width: 100%;
+    justify-content: center;
+    align-items: stretch; /* Ensures left and right are the same height */
+    gap: 0; /* Remove gaps between left and right */
+    border-radius: 10px;
+    overflow: hidden; /* Ensure content doesn't overflow */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.left, .right {
+    padding: 40px;
+    text-align: center;
+    flex: 1; /* Make both columns take equal space */
+    min-height: 100vh; /* Ensure they stretch to the same height */
+}
+
+.left {
+    background-color: rgba(228, 13, 196, 0);
+}
+
+.right {
+    background-color: rgba(188, 16, 131, 0.849);
+}
+
+#pfp {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #333;
+}
+
+.h1 {
+    font-size: 24px;
+    padding: 5px 0;
+}
+
+.phone, .email, .address {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.phone img, .email img, .address img {
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 100%;
+    margin-bottom: 10px;
+}
+
+.lan, .expts {
+    color: white;
+    background-color: rgb(88, 6, 228);
+    padding: 10px 50px;
+    text-transform: uppercase;
+    margin: 20px 0;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+.language p, .expertise p {
+    text-align: start;
+    padding: 2px 0;
+}
+
+.mainName {
+    text-shadow: 1px 1px 1px black;
+    font-family: cursive;
+    font-size: 50px;
+    font-weight: bolder;
+    color: rgb(11, 235, 134);
+    /* margin-bottom: 20px; */
+}
+
+.subSec {
+    text-align: start;
+    margin-bottom: 2px;
+}
+
+.last1, .last2 {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+button {
+    border: none;
+    padding: 10px 20px;
+    background-color: rgb(0, 153, 255);
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    transition: ease-in-out 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background-color: rgb(20, 120, 187);
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .resume {
+        flex-wrap: nowrap;
+    }
+    
+    .left {
+        max-width: 300px;
+    }
+    
+    .right {
+        max-width: calc(100% - 300px);
+    }
+}
+
+@media (min-width: 1024px) {
+    .resume {
+        margin: 40px auto;
+        max-width: 1000px;
+    }
+    
+    .mainName {
+        font-size: 60px;
+    }
+}
+
+
